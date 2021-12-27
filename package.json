@@ -1,14 +1,35 @@
 {
   "name": "sms-activate-new",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Package for using the new SMS-Activate.org API",
   "main": "./build/index.js",
+  "bin": "./build/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": [
+    "smsactivate",
+    "sms-activate",
+    "sms-api",
+    "sms",
+    "smsapi",
+    "smsactivate npm",
+    "sms-activate npm",
+    "sms-activate.org",
+    "smsactivate.org"
+  ],
   "author": "Daniel Hougaard",
-  "license": "ISC",
+  "license": "MIT",
+
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanielHougaard/sms-activate-new.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DanielHougaard/sms-activate-new/issues"
+  },
+  "homepage": "https://hougaardtech.com",
+
   "dependencies": {
     "@types/node": "^17.0.5",
     "axios": "^0.24.0",
