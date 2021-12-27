@@ -1,11 +1,11 @@
-name: Package Auto Upload
+name: PackageUploader
 on:
   create:
     tags:
       - v*
 
 jobs:
-  publish-npm:
+  package-uploader:
     needs: build
     runs-on: ubuntu-latest
     steps:
