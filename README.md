@@ -60,4 +60,4 @@ performRequest(specifiedAction: string, data: any)
 ```
 
 #### Credits ####
-At last, I would like to give credits to  [jsopn](https://github.com/jsopn/ "Github User") for his work on the now updated SMS-Activate wrapper.
+At last, I would like to give credits to  [jsopn](https://github.com/jsopn/ "Github User") for his work on the now outdated SMS-Activate wrapper.
