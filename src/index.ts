@@ -105,6 +105,14 @@ class SMSActivate {
         return response;
     }
 
+    getStatus = async (id: number = 0) => {
+        const response = await this.performRequest(ACTIONS['GET_STATUS'], {
+            id: id
+        })
+        const responseArray = response.split(':');
+
+        return responseArray[0];
+    }
     getCode = async (id: number = 0) => {
         const response = await this.performRequest(ACTIONS['GET_STATUS'], {
             id: id
@@ -115,18 +123,9 @@ class SMSActivate {
             return responseArray[1];
         }
 
-        throw new SMSActivateError('Failed to get code!');
+        return null;
     }
 
-    async getStatus(id: number = 0) {
-        const response = await this.performRequest('getStatus', {
-            id: id
-        })
-        const responseArray = response.split(':');
-
-
-        return responseArray[0];
-    }
 }
 
 export = SMSActivate;
