@@ -86,6 +86,13 @@ class SMSActivate {
             });
             return response;
         });
+        this.getStatus = (id = 0) => __awaiter(this, void 0, void 0, function* () {
+            const response = yield this.performRequest(ACTIONS['GET_STATUS'], {
+                id: id
+            });
+            const responseArray = response.split(':');
+            return responseArray[0];
+        });
         this.getCode = (id = 0) => __awaiter(this, void 0, void 0, function* () {
             const response = yield this.performRequest(ACTIONS['GET_STATUS'], {
                 id: id
@@ -94,7 +101,7 @@ class SMSActivate {
             if (responseArray[0] === 'STATUS_OK' && responseArray[1]) {
                 return responseArray[1];
             }
-            throw new handleExceptions_1.SMSActivateError('Failed to get code!');
+            return null;
         });
         if (apiKey) {
             this.apiKey = apiKey;
@@ -102,15 +109,6 @@ class SMSActivate {
                 baseURL: 'https://api.sms-activate.org/stubs/handler_api.php'
             });
         }
-    }
-    getStatus(id = 0) {
-        return __awaiter(this, void 0, void 0, function* () {
-            const response = yield this.performRequest('getStatus', {
-                id: id
-            });
-            const responseArray = response.split(':');
-            return responseArray[0];
-        });
     }
 }
 module.exports = SMSActivate;
