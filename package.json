@@ -1,6 +1,6 @@
 {
   "name": "sms-activate-new",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Package for using the new SMS-Activate.org API",
   "main": "./build/index.js",
   "bin": "./build/index.js",
