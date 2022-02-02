@@ -120,7 +120,10 @@ class SMSActivate {
         const responseArray = response.split(':');
 
         if (responseArray[0] === 'STATUS_OK' && responseArray[1]) {
-            return responseArray[1];
+            for (let i = 1; i < responseArray.length; i++) {
+                if (!isNaN(+responseArray[i]))
+                    return +responseArray[i]
+            }
         }
 
         return null;
