@@ -20,7 +20,7 @@ const ACTIONS: { [key: string]: string; } = {
     'GET_BALANCE': 'getBalance',
     'GET_BALANCE_CASHBACK': 'getBalanceAndCashBack',
     'GET_NUMBER': 'getNumber',
-    'SET_STATUS': 'getStatus',
+    'SET_STATUS': 'setStatus',
     'GET_STATUS': 'getStatus'
 
 }
