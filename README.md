@@ -17,7 +17,7 @@ if (balance > 0) {
   // Use number...
 
   const waitForCode = setInterval(async () => {
-    const code = await sms.getCode(numberDetails.id);
+    const code = await SMSActivate.getCode(numberDetails.id);
     if (code) {
       clearInterval(waitForCode);
       await smsActivate.setStatus(numberDetails.id, 6);
